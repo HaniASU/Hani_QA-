@@ -1,0 +1,112 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 251 252 255;
+    --foreground: 15 23 42;
+
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+
+    --primary: 59 130 246;
+    --primary-foreground: 248 250 252;
+
+    --secondary: 241 245 249;
+    --secondary-foreground: 51 65 85;
+
+    --muted: 248 250 252;
+    --muted-foreground: 100 116 139;
+
+    --accent: 241 245 249;
+    --accent-foreground: 51 65 85;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 59 130 246;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 15 23 42;
+    --foreground: 248 250 252;
+
+    --card: 30 41 59;
+    --card-foreground: 248 250 252;
+
+    --popover: 30 41 59;
+    --popover-foreground: 248 250 252;
+
+    --primary: 59 130 246;
+    --primary-foreground: 15 23 42;
+
+    --secondary: 51 65 85;
+    --secondary-foreground: 248 250 252;
+
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
+
+    --accent: 51 65 85;
+    --accent-foreground: 248 250 252;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+
+    --border: 51 65 85;
+    --input: 51 65 85;
+    --ring: 59 130 246;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
